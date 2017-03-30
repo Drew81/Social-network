@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block body %}
+<title>Post</title>
+
+<div class="container">
+  <h1><font color="black">Hey {{ user }}. Welcome to the Party Code web App! Let us find you a party.</font></h1>
+</div>
+
+<br>
+  {% for post in all_post %}
+<html>
+  <body>
+
+        <div class="container" width="200px">
+                <div class="thumbnail" >
+                    <div class="box">
+                    <img src="{{ post.image.url }}" width="250px" height="200px" border="5px" alt="...">
+                        <div class="caption">
+                            <div class="table">
+                                <h1>{{ post.name }}</h1>
+                                <h3>{{ post.about }}</h3>
+                                <h3>{{ post.zip }}</h3>
+                            </div>
+                            <br>
+                <p><a href="{% url 'UserPost:detail' post.id %}" class="btn btn-primary" role="button">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+  </body>
+
+
+{% endfor %}
+
+</html>
+
+{% endblock %}
+

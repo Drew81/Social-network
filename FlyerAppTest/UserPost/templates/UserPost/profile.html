@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+            <p><h1>Welcome {{ user }}</h1></p>
+            <img src="{{ user.userprofile.profile_image.url }}" width="200">
+   {% for post in all_post %}
+{{ post }}
+{% endfor %} </div>
+
+
+{% endblock %}

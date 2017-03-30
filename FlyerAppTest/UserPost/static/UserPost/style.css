@@ -1,0 +1,27 @@
+body {
+	background-image: url('brick2.png');
+}
+
+.logo {
+	width: 1000px;
+	height: 100px;
+	background: url('logo.png');
+	background-size: 350px;
+	background-repeat: no-repeat;
+	padding:20px;
+}
+
+.container {
+
+    border: 3px solid black;
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+}
+.p {
+float-right: 10px;
+}
+
+
+

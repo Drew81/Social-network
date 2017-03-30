@@ -1,0 +1,63 @@
+<br>
+
+<html>
+<body>
+<head>
+  {% load static %}
+  <link rel="stylesheet"  href="{% static 'UserPost/style.css' %}" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<h1 class="logo"></h1>
+<br>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'UserPost:index' %}">Party Code Web App</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li><a href="{% url 'UserPost:post-add' %}">
+           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Post</a></li>
+         <li><a href="{% url 'UserPost:list' %}">
+           <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>Search Database</a></li>
+        <li><a href="{% url 'UserPost:profile' %}">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>Profile</a></li>
+        <li><a href="{% url 'UserPost:edit_profile' %}">
+          <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>Edit-Profile</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'UserPost:logout' %}"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Logout</a></li>
+         <li><a href=""></a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<body>
+
+
+
+</body>
+{% block body %}
+{% endblock %}
+</body>
+</html>
+
+

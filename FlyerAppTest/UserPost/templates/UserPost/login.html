@@ -1,0 +1,13 @@
+{% extends 'static.html' %}
+{% block body %}
+<body>
+<div class="container">
+    <h1>Login here!</h1>
+    <form method="post">
+     {% csrf_token %}
+     {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+{% endblock %}

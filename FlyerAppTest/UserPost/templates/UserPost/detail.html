@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+<html>
+<head>
+
+    <title>Post Details</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Party details:</h1>
+        <img src="{{ post.image.url }}" width="200">
+    </div>
+<br>
+
+    <div class="container">
+        <p>{{ post.name }}</p>
+        <p>{{ post.address }}</p>
+        <p>{{ post.about }}</p>
+        <p>{{ post.zip }}</p>
+    </div>
+
+
+</body>
+
+    {% endblock %}
+</html>
+
